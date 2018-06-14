@@ -1,15 +1,36 @@
 const utils = require('./utils');
 
-test('should add two numbers', () => {
-    let res = utils.add(33, 11);
-    expect(res).toBe(44);
-    expect(typeof res).toBe('number')
-});
+describe('Utils', () => {
+    describe('#add', () => {
+        test('should add two numbers', () => {
+            let res = utils.add(33, 11);
+            expect(res).toBe(44);
+            expect(typeof res).toBe('number')
+        });
+        
+        test('should async square number', (done) => {
+            utils.asyncSquare(4, (square) => {
+                expect(square).toBe(16);
+                done();
+            })
+        });
 
-test('should square a number', () => {
-    let res = utils.square(3);
-    expect(res).toBe(9);
-    expect(typeof res).toBe('number');
+    });
+    describe('#square', () => {
+        test('should square a number', () => {
+            let res = utils.square(3);
+            expect(res).toBe(9);
+            expect(typeof res).toBe('number');
+        });
+        
+        test('should async add two numbers', (done) => {
+            utils.asyncAdd(5, 4, (sum) => {
+                expect(sum).toBe(9);
+                done();
+            });
+        });
+
+    });
 });
 
 test('should expect some values', () => {

@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cd node-todo-api && jest server/**/*.test.js",
-    "test-watch": "cd node-todo-api && nodemon --exec 'npm test'",
-    "start": "cd node-todo-api && node server/server.js"
+    "test": "cd node-chat-app && npm test",
+    "test-watch": "cd node-chat-app && npm test-watch",
+    "install": "cd node-chat-app && npm install",
+    "start": "cd node-chat-app && npm start"
   },
   "engines": {
     "node": "10.4.x"

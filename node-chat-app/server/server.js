@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
         io.emit('newLocationMessage', generateLocationMessage('Admin', coords.latitude, coords.longitude));
     });
 
-    socket.on('disconnect', (socket) => {
+    socket.on('disconnect', () => {
         var user = users.removeUser(socket.id);
 
         if (user) {
@@ -58,7 +58,7 @@ io.on('connection', (socket) => {
             io.to(user.room).emit('newMessage', generateMessage('Admin', `${user.name} has left`));
             console.log(`User ${user.name} was disconnected.`);
         }
-    });
+        });
 });
 
 server.listen(port, () => {

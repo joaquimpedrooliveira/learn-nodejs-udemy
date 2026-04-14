@@ -17,8 +17,8 @@
   },
   "devDependencies": {
     "expect": "^1.20.2",
-    "jest": "^23.1.0",
-    "mocha": "^3.0.0",
+    "jest": "^30.3.0",
+    "mocha": "^11.7.5",
     "rewire": "^2.5.2"
   },
   "jest": {

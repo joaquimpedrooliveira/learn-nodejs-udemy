@@ -16,16 +16,16 @@
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.18.3",
-    "crypto-js": "^3.1.6",
+    "crypto-js": "^4.2.0",
     "express": "^4.16.3",
-    "jsonwebtoken": "^8.5.0",
+    "jsonwebtoken": "^9.0.3",
     "lodash": "^4.17.11",
     "mongodb": "^3.0.10",
-    "mongoose": "^5.4.18",
-    "validator": "^5.6.0"
+    "mongoose": "^9.4.1",
+    "validator": "^13.15.35"
   },
   "devDependencies": {
-    "jest": "^24.3.1",
+    "jest": "^30.3.0",
     "supertest": "^3.1.0"
   }
 }
